@@ -1,0 +1,82 @@
+{
+  "name": "cmsk-ckeditor5",
+  "version": "29.1.0",
+  "description": "Video features for CKEditor 5 (like Image features).",
+  "keywords": [
+    "ckeditor",
+    "ckeditor5",
+    "ckeditor 5",
+    "ckeditor5-feature",
+    "ckeditor5-plugin",
+    "ckeditor5-video-upload",
+    "ckeditor5-video-upload-plugin"
+  ],
+  "scripts": {
+    "build": "webpack --mode development",
+    "build:watch": "webpack --mode development -w",
+    "dll:build": "webpack"
+  },
+  "type": "commonjs",
+  "main": "dist/csCkEditor.bundle.js",
+  "dependencies": {
+    "@ckeditor/ckeditor5-ui": "^29.1.0",
+    "ckeditor5": "^29.1.0",
+    "lodash-es": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@ckeditor/ckeditor5-adapter-ckfinder": "^29.1.0",
+    "@ckeditor/ckeditor5-basic-styles": "^29.1.0",
+    "@ckeditor/ckeditor5-block-quote": "^29.1.0",
+    "@ckeditor/ckeditor5-ckfinder": "^29.1.0",
+    "@ckeditor/ckeditor5-clipboard": "^29.1.0",
+    "@ckeditor/ckeditor5-core": "^29.1.0",
+    "@ckeditor/ckeditor5-dev-utils": "^25.0.0",
+    "@ckeditor/ckeditor5-editor-classic": "^29.1.0",
+    "@ckeditor/ckeditor5-engine": "^29.1.0",
+    "@ckeditor/ckeditor5-enter": "^29.1.0",
+    "@ckeditor/ckeditor5-essentials": "^29.1.0",
+    "@ckeditor/ckeditor5-heading": "^29.1.0",
+    "@ckeditor/ckeditor5-html-embed": "^29.1.0",
+    "@ckeditor/ckeditor5-indent": "^29.1.0",
+    "@ckeditor/ckeditor5-inspector": "^2.2.2",
+    "@ckeditor/ckeditor5-link": "^29.1.0",
+    "@ckeditor/ckeditor5-list": "^29.1.0",
+    "@ckeditor/ckeditor5-media-embed": "^29.1.0",
+    "@ckeditor/ckeditor5-paragraph": "^29.1.0",
+    "@ckeditor/ckeditor5-table": "^29.1.0",
+    "@ckeditor/ckeditor5-theme-lark": "^29.1.0",
+    "@ckeditor/ckeditor5-typing": "^29.1.0",
+    "@ckeditor/ckeditor5-undo": "^29.1.0",
+    "@ckeditor/ckeditor5-upload": "^29.1.0",
+    "@ckeditor/ckeditor5-utils": "^29.1.0",
+    "@ckeditor/ckeditor5-widget": "^29.1.0",
+    "babel-loader": "^8.2.3",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^4.0.2",
+    "style-loader": "^1.3.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=5.7.1"
+  },
+  "author": "Visao",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://github.com/Technologie-Visao/ckeditor5-video",
+  "bugs": "https://github.com/Technologie-Visao/ckeditor5-video/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Technologie-Visao/ckeditor5-video.git"
+  },
+  "files": [
+    "dist",
+    "lang",
+    "src",
+    "theme",
+    "build"
+  ]
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CKEditor 5 Framework – Quick start</title>
+
+    <style>
+        .simple-box {
+            padding: 10px;
+            margin: 1em 0;
+
+            background: rgba( 0, 0, 0, 0.1 );
+            border: solid 1px hsl(0, 0%, 77%);
+            border-radius: 2px;
+        }
+
+        .simple-box-title, .simple-box-description {
+            padding: 10px;
+            margin: 0;
+
+            background: #FFF;
+            border: solid 1px hsl(0, 0%, 77%);
+        }
+
+        .simple-box-title {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="editor">
+    <p>Simple video:</p>
+    <figure class="video">
+        <video src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"></video>
+    </figure>
+
+    <section class="simple-box">
+        <h1 class="simple-box-title">Box title</h1>
+        <div class="simple-box-description">
+            <p>The description goes here.</p>
+            <ul>
+                <li>It can contain lists,</li>
+                <li>and other block elements like headings.</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<script src="../dist/test.bundle.js"></script>
+<script>
+  class VideoUploadAdapter {
+      constructor( loader ) {
+          this.loader = loader;
+      }
+
+      upload() {
+          const uploadVideo = async (file) => {
+              this.loader.uploaded = false;
+              return new Promise((resolve) => {
+                  setTimeout(() => {
+                      this.loader.uploaded = true;
+                      resolve({ default: 'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4' });
+                  }, 2000);
+              });
+          };
+
+          return this.loader.file.then((file) => uploadVideo(file));
+      }
+
+      abort() {
+          return Promise.reject();
+      }
+  }
+
+  function VideoUploadAdapterPlugin( editor ) {
+      editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
+          return new VideoUploadAdapter(loader);
+      };
+  }
+  CsCkEditor.create(
+    document.querySelector( '#editor' ),
+    {
+      toolbar: [ 'heading', 'bold', 'italic', 'numberedList', 'bulletedList', 'videoUpload' ],
+      extraPlugins: [VideoUploadAdapterPlugin],
+      video: { 
+        upload: { 
+          types: ['mp4'],
+          allowMultipleFiles: false
+        },
+        styles: [ 'alignLeft', 'alignCenter', 'alignRight' ],
+        // Configure the available video resize options. 
+        resizeOptions: [ 
+          { name: 'videoResize:original', label: 'Original', icon: 'original' }, 
+          { name: 'videoResize:50', label: '50', icon: 'medium' },
+          { name: 'videoResize:75', label: '75', icon: 'large' }
+        ], 
+          // You need to configure the video toolbar, too, so it shows the new style // buttons as well as  the resize buttons.
+        toolbar: [ 
+          'videoStyle:alignLeft', 
+          'videoStyle:alignCenter', 
+          'videoStyle:alignRight', 
+          '|', 
+          'videoResize:50', 
+          'videoResize:75', 
+          'videoResize:original'
+        ] 
+    } 
+  }).then( editor => { 
+    window.editor = editor;
+  }).catch( error => { console.error( error.stack ); } );
+</script>
+</body>
+</html>
