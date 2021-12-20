@@ -1,6 +1,6 @@
 {
-  "name": "cmsk-ckeditor5",
-  "version": "1.0.0",
+  "name": "cmsk-plugin-ckeditor5",
+  "version": "1.0.1",
   "description": "Video features for CKEditor 5 (like Image features).",
   "keywords": [
     "ckeditor",
