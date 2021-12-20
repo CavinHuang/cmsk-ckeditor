@@ -13,7 +13,9 @@
     "url": "https://github.com/CavinHuang/cmsk-ckeditor.git"
   },
   "files": [
-    "build"
+    "build",
+    "src",
+    "theme"
   ],
   "devDependencies": {
     "@ckeditor/ckeditor5-adapter-ckfinder": "^31.1.0",
