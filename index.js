@@ -13,7 +13,9 @@ import VideoToolbar from "./src/videotoolbar";
 import VideoStyle from "./src/videostyle";
 import VideoInsert from "./src/videoinsert";
 
-ClassicEditor.builtinPlugins = [
+export default class CsCkEditor extends ClassicEditor {}
+
+CsCkEditor.builtinPlugins = [
   Paragraph,
   Bold,
   Italic,
@@ -28,4 +30,3 @@ ClassicEditor.builtinPlugins = [
   VideoStyle,
   VideoInsert
 ]
-export default ClassicEditor
