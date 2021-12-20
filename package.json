@@ -1,6 +1,6 @@
 {
   "name": "cmsk-plugin-ckeditor5",
-  "version": "1.0.1",
+  "version": "0.0.0-development",
   "description": "Video features for CKEditor 5 (like Image features).",
   "keywords": [
     "ckeditor",
@@ -14,7 +14,8 @@
   "scripts": {
     "build": "webpack --mode development",
     "build:watch": "webpack --mode development -w",
-    "dll:build": "webpack"
+    "dll:build": "webpack",
+    "semantic-release": "semantic-release"
   },
   "type": "commonjs",
   "main": "dist/csCkEditor.bundle.js",
@@ -69,11 +70,11 @@
   },
   "author": "Visao",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://github.com/Technologie-Visao/ckeditor5-video",
-  "bugs": "https://github.com/Technologie-Visao/ckeditor5-video/issues",
+  "homepage": "https://github.com/CavinHuang/cmsk-ckeditor",
+  "bugs": "https://github.com/CavinHuang/cmsk-ckeditor/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Technologie-Visao/ckeditor5-video.git"
+    "url": "https://github.com/CavinHuang/cmsk-ckeditor.git"
   },
   "files": [
     "dist",
