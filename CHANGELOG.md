@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/CavinHuang/cmsk-ckeditor/compare/v1.1.1...v1.1.2) (2021-12-21)
+
+
+### Bug Fixes
+
+* 更新release ([da9d25f](https://github.com/CavinHuang/cmsk-ckeditor/commit/da9d25f903952b211e6ec2d5bba930abbf0247e8))
+
 # 1.0.0 (2021-12-20)
 
 

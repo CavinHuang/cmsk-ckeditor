@@ -2,7 +2,7 @@
   "name": "cmsk-plugin-ckeditor5",
   "author": "cavinHuang",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "SEE LICENSE IN LICENSE.md",
   "private": true,
   "main": "./build/ckeditor.js",
