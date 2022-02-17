@@ -1,5 +1,5 @@
 {
-  "name": "ckeditor5-custom-build",
+    "name": "@cmsk/ckeditor5",
   "author": "CKSource",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder.",
   "version": "0.0.1",
@@ -35,6 +35,9 @@
     "@ckeditor/ckeditor5-table": "^31.1.0",
     "@ckeditor/ckeditor5-theme-lark": "^31.1.0",
     "@ckeditor/ckeditor5-typing": "^31.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^18.0.1",
     "css-loader": "^5.2.7",
     "postcss": "^8.4.4",
     "postcss-loader": "^4.3.0",
@@ -45,6 +48,7 @@
     "webpack-cli": "^4.9.1"
   },
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "semantic-release": "semantic-release"
   }
 }
