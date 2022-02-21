@@ -14,7 +14,7 @@ yarn add @cmsk/editor5
 ```
 
 ## 使用
-vue2 + ts使用示例
+vue2 + ts封装组件及使用示例
 
 ```vue
 <template>
@@ -103,5 +103,72 @@ export default class CkEdit extends Vue {
 <style scoped>
 
 </style>
+
+```
+
+组件使用
+
+```vue
+<template>
+<ckeditor  :editor-config="editorConfig" v-model="boardContent"></ckeditor>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+    boardContent: '',
+      editorConfig: {
+        extraPlugins: [VideoUploadAdapterPlugin],
+        video: {
+          upload: {
+            types: ['mp4'],
+            allowMultipleFiles: false
+          },
+          styles: [
+            'alignLeft', 'alignCenter', 'alignRight'
+          ],
+
+          // Configure the available video resize options.
+          resizeOptions: [
+            {
+              name: 'videoResize:original',
+              label: 'Original',
+              icon: 'original'
+            },
+            {
+              name: 'videoResize:50',
+              label: '50',
+              icon: 'medium'
+            },
+            {
+              name: 'videoResize:75',
+              label: '75',
+              icon: 'large'
+            }
+          ],
+
+          // You need to configure the video toolbar, too, so it shows the new style
+          // buttons as well as the resize buttons.
+          toolbar: [
+            'videoStyle:alignLeft', 'videoStyle:alignCenter', 'videoStyle:alignRight',
+            '|',
+            'videoResize:50',
+            'videoResize:75',
+            'videoResize:original'
+          ]
+        },
+        image: {
+          upload: {
+            types: ['jpeg', 'png', 'gif', 'bmp', 'webp', 'tiff']
+          }
+        },
+        language: 'zh-cn'
+      }
+
+    }
+  }
+}
+</script>
 
 ```
